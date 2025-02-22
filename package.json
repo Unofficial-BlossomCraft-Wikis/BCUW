@@ -1,22 +1,23 @@
 {
 	"name": "bcuw-monorepo",
-	"version": "1.0.0",
-	"description": "The BCUW monorepo",
-	"scripts": {
-		"website:dev": "pnpm --filter bcuw-v4-website dev",
-		"website:build": "pnpm --filter bcuw-v4-website build",
-		"website:check": "pnpm --filter bcuw-v4-website check",
-		"api:dev": "pnpm --filter bcuw-api dev",
-		"api:build": "pnpm --filter bcuw-api build",
-		"api:check": "pnpm --filter bcuw-api check",
-    "web+api:dev": "concurrently --kill-others -p \"[{name}]\" -n \"website,api\" -c \"bgBlue.bold,bgMagenta.bold\" \"pnpm --filter bcuw-v4-website dev\" \"pnpm --filter bcuw-api dev\"",
-    "web+api:build": "concurrently --kill-others -p \"[{name}]\" -n \"website,api\" -c \"bgBlue.bold,bgMagenta.bold\" \"pnpm --filter bcuw-v4-website build\" \"pnpm --filter bcuw-api build\"",
-    "web+api:check": "concurrently --kill-others -p \"[{name}]\" -n \"website,api\" -c \"bgBlue.bold,bgMagenta.bold\" \"pnpm --filter bcuw-v4-website check\" \"pnpm --filter bcuw-api check\""
-	},
-	"keywords": [],
-	"author": "Altie122",
-	"license": "MIT",
-	"devDependencies": {
-		"concurrently": "^9.1.2"
-	}
+	"description": "The BlossomCraft Unofficial wiki Monorepo",
+	"version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=20"
+  }
 }

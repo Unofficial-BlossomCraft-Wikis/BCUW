@@ -1,1 +1,0 @@
-const sale: number = 25; // % off
