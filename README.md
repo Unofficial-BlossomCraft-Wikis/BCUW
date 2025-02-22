@@ -28,7 +28,7 @@ thus making this version of BCUW 500.0.0-a.0
 v500.0.0-a.0
 
 ## Goals of V5
--[ ] Maintain client-side capatibility (/complex/path on v4 -> /complex/path on v5)
--[ ] move all information from MDX files to a database
--[ ] keep the website as visually consistent as possible
--[ ] make the website as accessible as possible
+- [ ] Maintain client-side capatibility (/complex/path on v4 -> /complex/path on v5)
+- [ ] move all information from MDX files to a database
+- [ ] keep the website as visually consistent as possible
+- [ ] make the website as accessible as possible
