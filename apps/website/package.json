@@ -2,14 +2,6 @@
   "name": "bcuw-v4-website",
   "type": "module",
   "version": "4.1.0",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "check": "astro check",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/mdx": "4.0.8",
