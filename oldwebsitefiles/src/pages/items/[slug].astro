@@ -1,0 +1,186 @@
+---
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+import Layout from '@/layouts/fullPageBox.astro';
+import { format } from "date-fns";
+import { Separator } from "@components/ui/separator";
+import CDN from "@components/CDN.astro";
+import { ItemTypeBadge } from "@components/Badge";
+import Badge from "@components/Badge";
+import { randomFromArray } from "@lib/random";
+import ItemPreview from "./_components/ItemPreview.astro";
+import Aside from "@components/starlight/Aside.astro";
+
+export type Props = {
+	post: CollectionEntry<"bcitems">;
+};
+
+export async function getStaticPaths() {
+	const blog = await getCollection("bcitems");
+
+	return blog.map((post) => ({
+		params: { slug: post.slug.replaceAll("/", "-") },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const allItems = await getCollection("bcitems");
+const { data } = post;
+let crateData: CollectionEntry<"crates"> | undefined = undefined;
+let recommendedItem1: CollectionEntry<"bcitems"> | undefined = undefined;
+let recommendedItem2: CollectionEntry<"bcitems"> | undefined = undefined;
+let recommendedItem3: CollectionEntry<"bcitems"> | undefined = undefined;
+let recommendedItem4: CollectionEntry<"bcitems"> | undefined = undefined;
+if (data.crate) {
+  crateData = await getEntry("crates", data.crate.id);
+  if (!crateData) {
+    throw new Error(`Crate with id ${data.crate.id} not found`);
+  }
+  const items = await Promise.all(
+  crateData.data.items.map((item: any) => getEntry("bcitems", item.id))
+).then(
+    (items) => items.filter(Boolean) as CollectionEntry<"bcitems">[],
+);
+  recommendedItem1 = randomFromArray(items)
+  // @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+  while (recommendedItem1.slug === post.slug) {
+    recommendedItem1 = randomFromArray(items)
+  }
+  recommendedItem2 = randomFromArray(items)
+  // @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+  while (recommendedItem2.slug === post.slug || recommendedItem1.slug === recommendedItem2.slug) {
+    recommendedItem2 = randomFromArray(items)
+  }
+} else {
+  recommendedItem1 = randomFromArray(allItems)
+  // @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+  while (recommendedItem1.slug === post.slug) {
+    recommendedItem1 = randomFromArray(allItems)
+  }
+  recommendedItem2 = randomFromArray(allItems)
+  // @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+  while (recommendedItem2.slug === post.slug || recommendedItem1.slug === recommendedItem2.slug) {
+    recommendedItem2 = randomFromArray(allItems)
+  }
+}
+recommendedItem3 = randomFromArray(allItems)
+// @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+while (recommendedItem3.slug === post.slug || recommendedItem1.slug === recommendedItem3.slug || recommendedItem2.slug === recommendedItem3.slug) {
+  recommendedItem3 = randomFromArray(allItems)
+}
+recommendedItem4 = randomFromArray(allItems)
+// @ts-expect-error if this code is running, the vars are defined (would give an possibly 'undefined' error otherwise)
+while (recommendedItem4.slug === post.slug || recommendedItem1.slug === recommendedItem4.slug || recommendedItem2.slug === recommendedItem4.slug || recommendedItem3.slug === recommendedItem4.slug) {
+  recommendedItem4 = randomFromArray(allItems)
+}
+---
+<Layout title={data.title} description={""}>
+  <article class=" container mx-auto max-w-screen-lg prose">
+    <div class="flex flex-row gap-2 items-center">
+      <CDN id={data.images.item} alt={data.title} />
+      <h1 class="noborder" id="item-title">{data.title}</h1>
+    </div>
+    {
+      crateData ? (
+    <time datetime={crateData.data.release.toISOString()} id="release-time">
+      Released: {format(crateData.data.release, "MMMM d, yyyy")} in the <a href={`/crates/${crateData.slug}/`}>{crateData.data.title}</a>.
+    </time>
+      ) : data.release ? (
+    <time datetime={data.release.toISOString()} id="release-time">
+      Released: {format(data.release, "MMMM d, yyyy")}
+    </time>
+      ) : null
+    }
+    <Separator />
+    <h2 class="noborder">Item Lore:</h2>
+    <div class="flex flex-row flex-wrap gap-2 justify-between">
+      {
+        <CDN id={data.images.color} alt={data.title} imgClassName="rounded-lg" divClassName="flex-shrink flex-grow max-w-[400px]" />
+      }
+      <div class="flex-shrink flex-grow max-w-[400px]">
+        {
+          data.images.colornotes &&
+          data.images.colornotes.map((colornote: any, index: number) => {
+            const totalNotes = data.images.colornotes!.length;
+            const isFirstNote = index === 0;
+            const isLastNote = index === totalNotes - 1;
+            return (
+              <Aside
+                type={colornote.type}
+                title={colornote.title}
+                topRounded={isFirstNote}
+                bottomRounded={isLastNote}
+              >
+                {colornote.content}
+              </Aside>
+            );
+          })
+        }
+      </div>
+    </div>
+    <Separator />
+    <h2 class="noborder">Type & Rarity:</h2>
+    <div class="flex flex-wrap flex-row gap-2">
+      {
+        <ItemTypeBadge type={data.type} />
+      }
+      {
+        data.rarity && (
+          <Badge className="no-underline">{data.rarity}</Badge>
+        )
+      }
+    </div>
+    <Separator />
+
+    {
+      data.enchantments && (
+        <div>
+          <h2 class="noborder">enchantments:</h2>
+          <div class="flex flex-wrap flex-row gap-2">
+          {
+            data.enchantments.map((enchantment: string) => {
+              return (
+                <Badge>{enchantment}</Badge>
+              )
+            })
+          }
+        </div></div>
+      )
+    }
+    <div>
+      {
+        crateData !== undefined ? (
+          <>
+            <h2 class="noborder">Also from the {crateData.data.title}:</h2>
+            <div class="flex gap-2 flex-wrap flex-col w-full p-2">
+              {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+              <ItemPreview post={recommendedItem1} />
+              {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+              <ItemPreview post={recommendedItem2} />
+            </div>
+            <Separator />
+            <h2 class="noborder">Explore These Items:</h2>
+            <div class="flex gap-2 flex-wrap flex-col w-full p-2">
+              {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+              <ItemPreview post={recommendedItem3} />
+              {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+              <ItemPreview post={recommendedItem4} />
+            </div>
+          </>
+        ) : (
+          <h2 class="noborder">Explore These Items:</h2>
+          <div class="flex gap-2 flex-wrap flex-col w-full p-2">
+              {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+            <ItemPreview post={recommendedItem1} />
+            {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+            <ItemPreview post={recommendedItem2} />
+            {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+            <ItemPreview post={recommendedItem3} />
+            {/* @ts-expect-error this is fine, post is a diffrent type but they lign up */}
+            <ItemPreview post={recommendedItem4} />
+          </div>
+        )
+      }
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,503 @@
+[?9001h[?1004h[?25l[2J[m[2;1H> bcuw-v4-website@4.1.0 build C:\Users\altie\OneDrive\Documentos\CodeProjects\bcuw\BCUW\apps\website
+> astro check && astro build[5;1H]0;C:\Users\altie\AppData\Local\pnpm\pnpm.exe[?25h[2m12:08:09[22m [34m[content] [mSyncing content
+[33m[1m12:08:09[22m [WARN] [glob-loader] [mThe base directory "C:\Users\altie\OneDrive\Documentos\CodeProjects\bcuw\BCUW\apps\website\src\content\patchnotes\" does not exist.
+[2m12:08:09[22m [34m[content] [mSynced content
+[2m12:08:09[22m [34m[types] [mGenerated [2m1.22s
+12:08:09[22m [34m[check] [mGetting diagnostics for Astro files in C:\Users\altie\OneDrive\Documentos\CodeProjects\bcuw\BCUW\apps\website...
+[?25l[96msrc/components/app-sidebar.tsx[m:[93m329[m:[93m16 [m- [91merror [90mts(2786): [m'PanelLeft' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.[7m[13;1H329[27m               <PanelLeft />[7m
+   [27m[16X[91m[16C~~~~~~~~~[96m
+src/components/app-sidebar.tsx[m:[93m313[m:[93m26 [m- [91merror [90mts(2786): [m'Eye' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+[?25h
+[7m313[27m                         <Eye />[K
+[7m   [27m[26X[91m[26C~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m304[m:[93m18 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m304[27m                 <ChevronDown className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180' />[K
+[7m   [27m[18X[91m[18C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m285[m:[93m26 [m- [91merror [90mts(2786): [m'Image' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m285[27m                         <Image />[K
+[7m   [27m[26X[91m[26C~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m277[m:[93m26 [m- [91merror [90mts(2786): [m'Server' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m277[27m                         <Server />[K
+[7m   [27m[26X[91m[26C~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m269[m:[93m26 [m- [91merror [90mts(2786): [m'Code' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m269[27m                         <Code />[K
+[7m   [27m[26X[91m[26C~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m260[m:[93m18 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m260[27m                 <ChevronDown className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180' />[K
+[7m   [27m[18X[91m[18C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m240[m:[93m26 [m- [91merror [90mts(2786): [m'Swords' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m240[27m                         <Swords />[K
+[7m   [27m[26X[91m[26C~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m232[m:[93m26 [m- [91merror [90mts(2786): [m'Package' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m232[27m                         <Package />[K
+[7m   [27m[26X[91m[26C~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m224[m:[93m26 [m- [91merror [90mts(2786): [m'BookUser' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m224[27m                         <BookUser />[K
+[7m   [27m[26X[91m[26C~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m215[m:[93m18 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m215[27m                 <ChevronDown className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180' />[K
+[7m   [27m[18X[91m[18C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m195[m:[93m26 [m- [91merror [90mts(2786): [m'LibraryBig' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m195[27m                         <LibraryBig />[K
+[7m   [27m[26X[91m[26C~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m187[m:[93m26 [m- [91merror [90mts(2786): [m'NotebookPen' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m187[27m                         <NotebookPen />[K
+[7m   [27m[26X[91m[26C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m179[m:[93m26 [m- [91merror [90mts(2786): [m'BookCheck' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m179[27m                         <BookCheck />[K
+[7m   [27m[26X[91m[26C~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m170[m:[93m18 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m170[27m                 <ChevronDown className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180' />[K
+[7m   [27m[18X[91m[18C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m150[m:[93m26 [m- [91merror [90mts(2786): [m'ScrollText' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m150[27m                         <ScrollText />[K
+[7m   [27m[26X[91m[26C~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m142[m:[93m26 [m- [91merror [90mts(2786): [m'BookOpen' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m142[27m                         <BookOpen />[K
+[7m   [27m[26X[91m[26C~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m134[m:[93m26 [m- [91merror [90mts(2786): [m'Newspaper' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m134[27m                         <Newspaper />[K
+[7m   [27m[26X[91m[26C~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m125[m:[93m18 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m125[27m                 <ChevronDown className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180' />[K
+[7m   [27m[18X[91m[18C~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m108[m:[93m24 [m- [93mwarning [90mts(6133): [m'sidebar_setOpen' is declared but its value is never read.[K
+
+[7m108[27m   const [sidebar_open, sidebar_setOpen] = React.useState(() => {[K
+[7m   [27m[24X[93m[24C~~~~~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m108[m:[93m10 [m- [93mwarning [90mts(6133): [m'sidebar_open' is declared but its value is never read.[K
+
+[7m108[27m   const [sidebar_open, sidebar_setOpe[Kn] = React.useState(() => {
+[7m   [27m[10X[93m[10C~~~~~~~~~~~~[K[m
+[96msrc/components/app-sidebar.tsx[m:[93m6[m:[93m3 [m- [93mwarning [90mts(6133): [m'SidebarGroupAction' is declared but its value is never read.[K
+
+[7m6[27m   SidebarGroupAction,[K
+[7m [27m   [93m~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/components/paginationComponent.astro[m:[93m23[m:[93m6 [m- [93mwarning [90mts(6133): [m'attrs' is declared but its value is never read.
+
+[7m23[27m   ...attrs[K
+[7m  [27m      [93m~~~~~[K[m
+
+[96msrc/components/progressbar.tsx[m:[93m5[m:[93m9 [m- [93mwarning [90mts(6133): [m'containerRef' is declared but its value is never read.
+
+[7m5[27m   const containerRef = useRef<HTMLElement | null>(null); // Create ref to hold the container element[K
+[7m [27m[9X[93m[9C~~~~~~~~~~~~[K[m
+
+[96msrc/components/theme-toggle.tsx[m:[93m35[m:[93m12 [m- [91merror [90mts(2786): [m'Moon' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m35[27m           <Moon className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />[K
+[7m  [27m[12X[91m[12C~~~~[K[m
+[96msrc/components/theme-toggle.tsx[m:[93m34[m:[93m12 [m- [91merror [90mts(2786): [m'Sun' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m34[27m           <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />[K
+[7m  [27m[12X[91m[12C~~~[K[m
+
+[96msrc/components/ui/avatar.tsx[m:[93m34[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.
+
+[7m34[27m   React.ElementRef<typeof AvatarPrimitive.Fallback>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/avatar.tsx[m:[93m22[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m22[27m   React.ElementRef<typeof AvatarPrimitive.Image>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/avatar.tsx[m:[93m7[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m7[27m   React.ElementRef<typeof AvatarPrimitive.Root>,[K
+[7m [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m131[m:[93m10 [m- [91merror [90mts(2786): [m'Circle' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m131[27m         <Circle className='h-2 w-2 fill-current' />[K
+[7m   [27m[10X[91m[10C~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m108[m:[93m10 [m- [91merror [90mts(2786): [m'Check' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m108[27m         <Check className='h-4 w-4' />[K
+[7m   [27m[10X[91m[10C~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m35[m:[93m6 [m- [91merror [90mts(2786): [m'ChevronRight' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m35[27m     <ChevronRight className='ml-auto h-4 w-4' />[K
+[7m  [27m      [91m~~~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m158[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m158[27m   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m140[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m140[27m   React.ElementRef<typeof DropdownMenuPrimitive.Label>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m118[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m118[27m   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m94[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m94[27m   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m76[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m76[27m   React.ElementRef<typeof DropdownMenuPrimitive.Item>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m58[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m58[27m   React.ElementRef<typeof DropdownMenuPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m42[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m42[27m   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/dropdown-menu.tsx[m:[93m20[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m20[27m   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/hover-card.tsx[m:[93m11[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.
+
+[7m11[27m   React.ElementRef<typeof HoverCardPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/navigation-menu.tsx[m:[93m57[m:[93m6 [m- [91merror [90mts(2786): [m'ChevronDown' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m57[27m     <ChevronDown[K
+[7m  [27m      [91m~~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m101[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m101[27m   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m83[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m83[27m   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m66[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m66[27m   React.ElementRef<typeof NavigationMenuPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m48[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m48[27m   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m27[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m27[27m   React.ElementRef<typeof NavigationMenuPrimitive.List>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/navigation-menu.tsx[m:[93m9[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m9[27m   React.ElementRef<typeof NavigationMenuPrimitive.Root>,[K
+[7m [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/pagination.tsx[m:[93m106[m:[93m6 [m- [91merror [90mts(2786): [m'MoreHorizontal' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m106[27m     <MoreHorizontal className='h-4 w-4' />[K
+[7m   [27m      [91m~~~~~~~~~~~~~~[K[m
+[96msrc/components/ui/pagination.tsx[m:[93m92[m:[93m6 [m- [91merror [90mts(2786): [m'ChevronRight' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m92[27m     <ChevronRight className='h-4 w-4' />[K
+[7m  [27m      [91m~~~~~~~~~~~~[K[m
+[96msrc/components/ui/pagination.tsx[m:[93m75[m:[93m6 [m- [91merror [90mts(2786): [m'ChevronLeft' cannot be used as a JSX component.[K
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m75[27m     <ChevronLeft className='h-4 w-4' />[K
+[7m  [27m      [91m~~~~~~~~~~~[K[m
+
+[96msrc/components/ui/separator.tsx[m:[93m7[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.
+
+[7m7[27m   React.ElementRef<typeof SeparatorPrimitive.Root>,[K
+[7m [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/sheet.tsx[m:[93m67[m:[93m10 [m- [91merror [90mts(2786): [m'X' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m67[27m         <X className='h-4 w-4' />[K
+[7m  [27m[10X[91m[10C~[K[m
+[96msrc/components/ui/sheet.tsx[m:[93m116[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m116[27m   React.ElementRef<typeof SheetPrimitive.Description>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/sheet.tsx[m:[93m104[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m104[27m   React.ElementRef<typeof SheetPrimitive.Title>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/sheet.tsx[m:[93m55[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m55[27m   React.ElementRef<typeof SheetPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/sheet.tsx[m:[93m17[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m17[27m   React.ElementRef<typeof SheetPrimitive.Overlay>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/sidebar.tsx[m:[93m280[m:[93m8 [m- [91merror [90mts(2786): [m'PanelLeft' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not a valid JSX element type.
+
+[7m280[27m       <PanelLeft />[K
+[7m   [27m        [91m~~~~~~~~~[K[m
+[96msrc/components/ui/sidebar.tsx[m:[93m383[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m383[27m   React.ElementRef<typeof Separator>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/sidebar.tsx[m:[93m335[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m335[27m   React.ElementRef<typeof Input>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/sidebar.tsx[m:[93m262[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m262[27m   React.ElementRef<typeof Button>,[K
+[7m   [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/tabs.tsx[m:[93m39[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.
+
+[7m39[27m   React.ElementRef<typeof TabsPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/tabs.tsx[m:[93m24[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m24[27m   React.ElementRef<typeof TabsPrimitive.Trigger>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+[96msrc/components/ui/tabs.tsx[m:[93m9[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.[K
+
+[7m9[27m   React.ElementRef<typeof TabsPrimitive.List>,[K
+[7m [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/components/ui/tooltip.tsx[m:[93m13[m:[93m9 [m- [93mwarning [90mts(6385): [m'ElementRef' is deprecated.
+
+[7m13[27m   React.ElementRef<typeof TooltipPrimitive.Content>,[K
+[7m  [27m[9X[93m[9C~~~~~~~~~~[K[m
+
+[96msrc/layouts/fullPageBox.astro[m:[93m2[m:[93m1 [m- [93mwarning [90mts(6133): [m'ProgressBar' is declared but its value is never read.
+
+[7m2[27m import ProgressBar from '@components/progressbar'[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/layouts/fullPageBoxGenerated.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'ProgressBar' is declared but its value is never read.
+
+[7m4[27m import ProgressBar from '@components/progressbar';[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/layouts/main.astro[m:[93m29[m:[93m54 [m- [93mwarning [90mts(6385): [m'vendor' is deprecated.
+
+[7m29[27m   const userAgent = navigator.userAgent || navigator.vendor || window.opera;[K
+[7m  [27m[54X[93m[54C~~~~~~[K[m
+[96msrc/layouts/main.astro[m:[93m50[m:[93m46 [m- [93mwarning [90mastro(4000): [mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features 
+[16;173H that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m50[27m     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c601a619e3b44ae382b4fe5262cfbca2"}
+[16;173H}'></script><!-- End Cloudflare Web Analytics -->
+[7m  [27m[46X[93m[46C~~~~~[K[m
+
+[96msrc/pages/api/v1/data/compatdate.json.ts[m:[93m3[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m3[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/fulldump.json.ts[m:[93m14[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m14[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/announcements/all.json.ts[m:[93m17[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m17[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/authors/all.json.ts[m:[93m20[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m20[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/blog/all.json.ts[m:[93m23[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m23[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/crates/all.json.ts[m:[93m24[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m24[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/items/all.json.ts[m:[93m39[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m39[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/patchnotes/all.json.ts[m:[93m18[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m18[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/data/tutorials/all.json.ts[m:[93m25[m:[93m37 [m- [93mwarning [90mts(6198): [mAll destructured elements are unused.
+
+[7m25[27m export const GET: APIRoute = async ({ params, request }) => {[K
+[7m  [27m[37X[93m[37C~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/api/v1/images/preview.ts[m:[93m35[m:[93m29 [m- [93mwarning [90mts(6133): [m'params' is declared but its value is never read.
+
+[7m35[27m export async function GET({ params, request }: { params: any; request: Request }) {[K
+[7m  [27m[29X[93m[29C~~~~~~[K[m
+
+[96msrc/pages/blog/[...page].astro[m:[93m4[m:[93m25 [m- [93mwarning [90mts(6133): [m'getEntry' is declared but its value is never read.
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[25X[93m[25C~~~~~~~~[K[m
+
+[96msrc/pages/blog/[slug].astro[m:[93m5[m:[93m29 [m- [93mwarning [90mts(6133): [m'resolveSocialImage' is declared but its value is never read.
+
+[7m5[27m import { resolveCoverImage, resolveSocialImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m[29X[93m[29C~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/blog/_components/BlogPostPreview.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'randomFromArray' is declared but its value is never read.
+
+[7m4[27m import { randomFromArray } from "@/lib/random";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/blog/_components/BlogPostPreview.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'resolveCoverImage' is declared but its value is never read.[K
+
+[7m3[27m import { resolveCoverImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/crates/[...page].astro[m:[93m4[m:[93m25 [m- [93mwarning [90mts(6133): [m'getEntry' is declared but its value is never read.
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[25X[93m[25C~~~~~~~~[K[m
+
+[96msrc/pages/crates/[...slug].astro[m:[93m7[m:[93m8 [m- [93mwarning [90mts(6133): [m'Badge' is declared but its value is never read.
+
+[7m7[27m import Badge, { CrateTagBadge, ItemTypeBadge } from "@components/Badge";[K
+[7m [27m        [93m~~~~~[K[m
+
+[96msrc/pages/crates/_components/CratePreview.astro[m:[93m6[m:[93m8 [m- [93mwarning [90mts(6133): [m'Badge' is declared but its value is never read.
+
+[7m6[27m import Badge, { CrateTagBadge } from "@components/Badge";[K
+[7m [27m        [93m~~~~~[K[m
+[96msrc/pages/crates/_components/CratePreview.astro[m:[93m5[m:[93m1 [m- [93mwarning [90mts(6133): [m'CDN' is declared but its value is never read.[K
+
+[7m5[27m import CDN from "@components/CDN.astro";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/crates/_components/CratePreview.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'randomFromArray' is declared but its value is never read.[K
+
+[7m4[27m import { randomFromArray } from "@/lib/random";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/crates/_components/CratePreview.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'resolveCoverImage' is declared but its value is never read.[K
+
+[7m3[27m import { resolveCoverImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/items/[...page].astro[m:[93m4[m:[93m25 [m- [93mwarning [90mts(6133): [m'getEntry' is declared but its value is never read.
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[25X[93m[25C~~~~~~~~[K[m
+
+[96msrc/pages/items/all.astro[m:[93m5[m:[93m1 [m- [93mwarning [90mts(6192): [mAll imports in import declaration are unused.
+
+[7m5[27m import type { GetStaticPathsOptions, Page } from "astro";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/all.astro[m:[93m4[m:[93m40 [m- [93mwarning [90mts(6133): [m'CollectionEntry' is declared but its value is never read.[K
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[40X[93m[40C~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/all.astro[m:[93m4[m:[93m25 [m- [93mwarning [90mts(6133): [m'getEntry' is declared but its value is never read.[K
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[25X[93m[25C~~~~~~~~[K[m
+[96msrc/pages/items/all.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'Pagination' is declared but its value is never read.[K
+
+[7m3[27m import Pagination from "@/components/paginationComponent.astro";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/items/_components/ItemPreview.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'randomFromArray' is declared but its value is never read.
+
+[7m4[27m import { randomFromArray } from "@/lib/random";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/_components/ItemPreview.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'resolveCoverImage' is declared but its value is never read.[K
+
+[7m3[27m import { resolveCoverImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/_components/ItemPreview.astro[m:[93m2[m:[93m1 [m- [93mwarning [90mts(6133): [m'format' is declared but its value is never read.[K
+
+[7m2[27m import { format } from "date-fns";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/items/_components/ItemPreviewAll.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'randomFromArray' is declared but its value is never read.
+
+[7m4[27m import { randomFromArray } from "@/lib/random";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/_components/ItemPreviewAll.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'resolveCoverImage' is declared but its value is never read.[K
+
+[7m3[27m import { resolveCoverImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/items/_components/ItemPreviewAll.astro[m:[93m2[m:[93m1 [m- [93mwarning [90mts(6133): [m'format' is declared but its value is never read.[K
+
+[7m2[27m import { format } from "date-fns";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/tutorials/[...page].astro[m:[93m4[m:[93m25 [m- [93mwarning [90mts(6133): [m'getEntry' is declared but its value is never read.
+
+[7m4[27m import { getCollection, getEntry, type CollectionEntry } from 'astro:content';[K
+[7m [27m[25X[93m[25C~~~~~~~~[K[m
+
+[96msrc/pages/tutorials/[slug].astro[m:[93m5[m:[93m29 [m- [93mwarning [90mts(6133): [m'resolveSocialImage' is declared but its value is never read.
+
+[7m5[27m import { resolveCoverImage, resolveSocialImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m[29X[93m[29C~~~~~~~~~~~~~~~~~~[K[m
+
+[96msrc/pages/tutorials/_components/TutorialPostPreview.astro[m:[93m4[m:[93m1 [m- [93mwarning [90mts(6133): [m'randomFromArray' is declared but its value is never read.
+
+[7m4[27m import { randomFromArray } from "@/lib/random";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[96msrc/pages/tutorials/_components/TutorialPostPreview.astro[m:[93m3[m:[93m1 [m- [93mwarning [90mts(6133): [m'resolveCoverImage' is declared but its value is never read.[K
+
+[7m3[27m import { resolveCoverImage } from "@/content/blog/_resolveImages.js";[K
+[7m [27m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[1mResult (78 files): [22m
+[2m-[22m [31m[1m30 errors[m[K
+[2m-[22m [33m[1m0 warnings[m[K
+[2m-[22m [2m74 hints[22m[K
+
+[30m[41m ELIFECYCLE [m [31mCommand failed with exit code 1.[m
+[?9001l[?1004l

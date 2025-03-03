@@ -1,0 +1,82 @@
+---
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+import Layout from '@/layouts/fullPageBox.astro';
+import { format } from "date-fns";
+import { Separator } from "@components/ui/separator";
+import CDN from "@components/CDN.astro";
+import Badge, { CrateTagBadge, ItemTypeBadge } from "@components/Badge";
+
+export type Props = {
+	post: CollectionEntry<"crates">;
+};
+
+export async function getStaticPaths() {
+	const blog = await getCollection("crates");
+	return blog.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+
+const { data } = post;
+const items = await Promise.all(
+    data.items.map((item: any) => getEntry("bcitems", item.id))
+).then(
+    (items) => items.filter(Boolean) as CollectionEntry<"bcitems">[],
+);
+---
+<Layout>
+  <article class=" container mx-auto max-w-screen-lg prose">
+    <h1 id="crate-title">{data.title}</h1>
+    <time datetime={data.release.toISOString()} id="release-time">
+      Released: {format(post.data.release, "MMMM d, yyyy")} <!-- TODO: Make client format this -->
+    </time>
+    <Separator />
+    <h2 class="noborder">Crate Preview:</h2>
+    <div class="flex flex-row flex-wrap gap-2">
+      {
+        data.cratePreview.map((cratePreview: string) => {
+          return (
+            <CDN id={cratePreview} alt={data.title} imgClassName="rounded-lg" divClassName="flex-shrink flex-grow max-w-[400px]" />
+          )
+        })
+      }
+    </div>
+    <Separator />
+    <div>
+      <h2 class="noborder">Tags:</h2>
+      <div class="flex flex-wrap flex-row gap-2">
+        {
+          data.tags.map((tag: "infinite crate" | "season" | "lt" | "holiday" | "other") => {
+            return (
+              <CrateTagBadge tag={tag} />
+            )
+          })
+        }
+      </div>
+    </div>
+    <Separator />
+    <h2 class="noborder">Items:</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      {
+        items.map((item) => {
+          return (
+            <div>
+              <a href={`/items/${item.slug.replaceAll("/", "-")}/`} class="flex flex-row gap-2 items-center flex-wrap">
+                <CDN id={item.data.images.item} alt={item.data.title} />
+                <h2 class="noborder" id={item.slug.replaceAll("/", "-")}>{item.data.title} {item.data.cratequantity && `(X${item.data.cratequantity})`}</h2>
+                <div class="flex flex-col gap-2">
+                {
+                  <ItemTypeBadge type={item.data.type} />
+                }
+                </div>
+              </a>
+              <CDN id={item.data.images.color} alt={item.data.title} imgClassName="w-full" divClassName="w-full" />
+            </div>
+          )
+        })
+      }
+  </article>
+</Layout>

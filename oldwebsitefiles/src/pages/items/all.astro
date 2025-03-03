@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/fullPageBox.astro';
+import Pagination from "@/components/paginationComponent.astro";
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import type { GetStaticPathsOptions, Page } from "astro";
+import ItemPreview from "./_components/ItemPreviewAll.astro";
+
+const allItems = [...(await getCollection('bcitems'))];
+
+const allItemsSorted = allItems.sort((a, b) => {
+  if (a.data.title < b.data.title) return -1;
+  if (a.data.title > b.data.title) return 1;
+  return 0;
+});
+---
+
+<Layout>
+	<main class="w-full">
+    <h1 class="prose-h1 text-center">All Items</h1>
+    <p class="prose-p text-center">We currently have <span class="text-ranks-celestial">{allItems.length}</span> items in this site.</p>
+		<div class="masonry p-2">
+			{
+				allItemsSorted.length > 0 ? (allItemsSorted.map((post) => (
+					// @ts-expect-error post has two diffrent types that align enough to work
+					<ItemPreview post={post} />
+				))) : (<h2 class="prose-h2">There are no items</h2>)
+			}
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import { Separator } from '@components/ui/separator';
+import Layout from './main.astro';
+import ProgressBar from '@components/progressbar';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+	<div class="w-full px-2 md:pl-0 pb-2 h-[calc(100%-1rem)]">
+		<div class='flex flex-row bg-sidebar text-sidebar-foreground rounded-lg border border-sidebar-border shadow h-full overflow-y-scroll main-scroll'>
+			<div class="prose">
+				{frontmatter.title && (
+					<>
+						<h1>{frontmatter.title}</h1>
+					</>
+				)}
+				{frontmatter.subtitle && (
+					<>
+						<h2>{frontmatter.subtitle}</h2>
+						<Separator />
+					</>
+				)}
+				<slot />
+			</div>
+		</div>
+	</div>
+</Layout>

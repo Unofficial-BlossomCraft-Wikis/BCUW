@@ -1,0 +1,49 @@
+---
+import { format } from "date-fns";
+import { resolveCoverImage } from "@/content/blog/_resolveImages.js";
+import { randomFromArray } from "@/lib/random";
+import CDN from "@components/CDN.astro";
+import Badge, { CrateTagBadge } from "@components/Badge";
+
+type CrateTagType = "infinite crate" | "season" | "lt" | "holiday" | "other";
+
+export type Props = {
+	post: {
+		slug: string;
+		data: {
+			title: string;
+			release: Date;
+			cratePreview: string[];
+			tags: CrateTagType[];
+		};
+	};
+};
+
+const { post } = Astro.props;
+---
+<article class="border p-4 duration-300 ease-out focus-within:outline hover:bg-sidebar rounded-lg shadow flex-shrink flex-grow">
+	<a
+		href={`/crates/${post.slug}/`}
+		data-astro-prefetch
+		class="block outline-none"
+	>
+	<div class="flex flex-row gap-2">
+		<div class="flex flex-col gap-2 flex-shrink flex-grow">
+			<h3 class="text-lg sm:text-xl lg:text-2xl text-secondary-foreground">{post.data.title}</h3>
+			<time datetime={post.data.release.toISOString()}>
+				{format(post.data.release, "MMMM d, yyyy")}
+			</time>
+		</div>
+		<div class="flex flex-wrap flex-col items-center flex-shrink flex-grow">
+			Tags:
+			{
+				post.data.tags.map((tag: "infinite crate" | "season" | "lt" | "holiday" | "other") => {
+					return (
+						<CrateTagBadge tag={tag} />
+					)
+				})
+			}
+		</div>
+	</div>
+</a>
+</article>

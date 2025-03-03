@@ -1,0 +1,54 @@
+---
+import Layout from '@components/layout'
+import '@/styles/globals.css'
+import '@/styles/starlight/props.css'
+import '@/styles/starlight/asides.css'
+import Head from '@components/head.astro'
+---
+<!DOCTYPE html>
+<script is:inline>
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+ 
+	if (typeof localStorage !== 'undefined') {
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Check if the user is on an iPhone or iPad
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+  if (isIOS) {
+    // Apply a specific class or attribute for iOS devices
+    document.documentElement.classList.add("ios-device");
+  }
+});
+</script>
+<html lang="en">
+	<head>
+		<Head title="BCUW" description="BlossomCraft Unofficial Wiki | The community-run BlossomCraft Wiki, documenting since August 13, 2023." icon="/bcuwOnlyTitleSquare.png" banner="/bcuwTitleNormal.png" />
+	</head>
+	<body class="h-svh w-screen overflow-hidden">
+    <Layout client:only="react">
+      <slot />
+    </Layout>
+		{
+			process.env.NODE_ENV === 'production' && (
+				<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c601a619e3b44ae382b4fe5262cfbca2"}'></script><!-- End Cloudflare Web Analytics -->
+			)
+		}
+	</body>
+</html>

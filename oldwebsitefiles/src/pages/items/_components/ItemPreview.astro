@@ -1,0 +1,57 @@
+---
+import { format } from "date-fns";
+import { resolveCoverImage } from "@/content/blog/_resolveImages.js";
+import { randomFromArray } from "@/lib/random";
+import CDN from "@components/CDN.astro";
+import Badge, { ItemTypeBadge } from "@components/Badge";
+
+export type Props = {
+	post: {
+		slug: string;
+		data: {
+			title: string;
+			images: {
+				color: string;
+				item: string;
+			};
+			type: "magic/infinite" | "weapon" | "armor" | "consumable" | "tool" | "other";
+			crate?: string;
+			rarity?: string;
+			enchantments?: string[];
+		};
+	};
+};
+
+const { post } = Astro.props;
+---
+<article class="border p-4 duration-300 ease-out focus-within:outline hover:bg-sidebar rounded-lg shadow flex-shrink flex-grow">
+	<div>
+		<a href={`/items/${post.slug.replaceAll("/", "-")}/`} class="flex flex-row gap-2 items-center flex-wrap">
+			<CDN id={post.data.images.item} alt={post.data.title} />
+			<h2 class="noborder" id={post.slug}>{post.data.title}</h2>
+			<div class="flex flex-col gap-2">
+			{
+				<ItemTypeBadge type={post.data.type} />
+			}
+			{
+				post.data.rarity && (
+					<Badge className="no-underline">{post.data.rarity}</Badge>
+				)
+			}
+			</div>
+			{
+				post.data.enchantments && (
+					<div class="flex flex-wrap flex-row gap-2">
+						{
+							post.data.enchantments.map((enchantment: string) => {
+								return (
+									<Badge>{enchantment}</Badge>
+								)
+							})
+						}
+					</div>
+				)
+			}
+		</a>
+	</div>
+</article>
